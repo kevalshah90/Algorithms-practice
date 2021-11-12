@@ -26,3 +26,7 @@ def running_mean(input_list, window_size):
             output_list.append(s1)  
             
     return output_list
+
+
+
+running_mean(input_list, window_size)
