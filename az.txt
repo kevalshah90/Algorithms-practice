@@ -1,0 +1,62 @@
+Q Write a function to find the largest palindrome number made from the product of two 3-digit numbers. 
+(e.g., 9009=91x99 is largest palindrome number that is a product of 2-digit numbers).
+
+Given some isPalindrome(), returns True and False.
+
+Palindrome is a number that reads the same forward and backward 
+
+
+for i in range(100,999):
+    
+    # calculate product
+    for j in range(i,999):
+        
+        p = i*j
+        
+        # check if palindrome
+        pret = isPalindrome(p)
+        
+        if pret == True:
+            
+            maxP = p
+
+
+
+Q. 
+
+-- Sample tables
+ORDERS
+    order_id varchar(30)
+    customer_id numeric(38,0)
+    order_datetime timestamp
+    item_id varchar(10)
+    item_price decimal(10,2)
+    item_quantity numeric(38,0)
+    primary key (order_id, item_id)
+
+ADDRESSES
+    customer_id numeric(38,0)
+    start_date timestamp
+    end_date timestamp
+    zip_code varchar(10)
+    state varchar(100)
+    country varchar(100)
+    primary key (customer_id, start_date)
+
+Here is a sample of data one might query from the above tables, which lists an ordered record of purchases, 
+including a column listing the price of the last purchase made by using the lag() function.
+
+customer_id | order_datetime | order_id | item_quantity | item_price | lag(item_price,1)
+123         | 2020-03-01     | 100      | 1             | 15.50      | null
+123         | 2020-03-05     | 200      | 3             | 7.90       | 15.5
+123         | 2020-03-20     | 300      | 4             | 2.10       | 7.9
+
+
+
+Q: Which customers spent more on their second order than on their first?
+
+a.
+
+1-(1-p)^20 = 0.05
+
+0.05/20
